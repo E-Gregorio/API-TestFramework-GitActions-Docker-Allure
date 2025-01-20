@@ -2,9 +2,12 @@ name: API Test Workflow
 
 on:
   push:
-    branches: [ main, master ]
+    branches: [ "main", "master", "develop" ]  # Agregamos develop para más flexibilidad
   pull_request:
-    branches: [ main, master ]
+    branches: [ "main", "master", "develop" ]
+  schedule:
+    - cron: '0 0 * * *'  # Ejecutar diariamente a medianoche
+  workflow_dispatch:  # Permite la ejecución manual desde la interfaz de GitHub
 
 permissions:
   contents: write
@@ -16,13 +19,17 @@ jobs:
     runs-on: ubuntu-latest
     
     steps:
-    - uses: actions/checkout@v3
+    - name: Checkout repository
+      uses: actions/checkout@v3
     
     - name: Build Docker image
-      run: docker build -t api-tests .
+      run: |
+        echo "🐳 Building Docker image..."
+        docker build -t api-tests .
       
     - name: Run tests in Docker
       run: |
+        echo "🧪 Running tests in Docker container..."
         docker run --name test-container api-tests
         docker cp test-container:/app/allure-results ./allure-results
       
@@ -50,4 +57,4 @@ jobs:
         github_token: ${{ secrets.GITHUB_TOKEN }}
         publish_branch: gh-pages
         publish_dir: allure-history
-        force_orphan: true  # Esto creará el branch si no existe
+        force_orphan: true
