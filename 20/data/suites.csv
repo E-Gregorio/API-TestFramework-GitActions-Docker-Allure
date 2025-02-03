@@ -1,0 +1,5 @@
+"DESCRIPTION","DURATION IN MS","NAME","PARENT SUITE","START TIME","STATUS","STOP TIME","SUB SUITE","SUITE","TEST CLASS","TEST METHOD"
+"","248","POST - Create Post","JSONPlaceholder CRUD","Mon Feb 03 00:48:32 GMT 2025","passed","Mon Feb 03 00:48:32 GMT 2025","","","",""
+"","39","GET  -Get post id","JSONPlaceholder CRUD","Mon Feb 03 00:48:32 GMT 2025","passed","Mon Feb 03 00:48:32 GMT 2025","","","",""
+"","123","GET - List All Posts","JSONPlaceholder CRUD","Mon Feb 03 00:48:31 GMT 2025","passed","Mon Feb 03 00:48:32 GMT 2025","","","",""
+"","98","GET  -Delete User Id","JSONPlaceholder CRUD","Mon Feb 03 00:48:32 GMT 2025","passed","Mon Feb 03 00:48:32 GMT 2025","","","",""
