@@ -1,9 +1,0 @@
-{
-    "Accept": "application/json",
-    "User-Agent": "PostmanRuntime/7.29.0",
-    "Cache-Control": "no-cache",
-    "Postman-Token": "591567f5-36d1-4f1d-ae6a-6f5788a4c564",
-    "Host": "jsonplaceholder.typicode.com",
-    "Accept-Encoding": "gzip, deflate, br",
-    "Connection": "keep-alive"
-}
